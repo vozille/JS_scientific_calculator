@@ -232,22 +232,10 @@ table,tr,
 
 function factorial(x)
 {
-    var i1=x;
-    
-    if(i1==0 || i1==1)
-    {
-        return(1)
-    }
-    
+    if(x==0)
+    	return 1;
     else
-    {    
-    while(i1>1 && x%1==0)
-    {
-        x=x*(i1-1);
-        i1--;
-    }
-    return(x);
-    }
+    	return x*factorial(x-1);
 };
 
 function gcd(x,y)
