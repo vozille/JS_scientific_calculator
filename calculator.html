@@ -21,7 +21,7 @@ table,tr,
 {
     width: 330px;
     height: 65px;
-    font-size : 27px ;
+    font-size : 30px ;
     background-color : #FFFAD2 ;
 }
 .button
@@ -602,7 +602,7 @@ function resize()
     sz=parseInt(sz);
     if(len>flen)
     {
-        s.style.fontSize= (sz/2+4)+"px";
+        s.style.fontSize= (parseInt(sz/(1.5)))+"px";
         req=true;
         flen=flen*2;
     }
@@ -610,12 +610,11 @@ function resize()
 function restore()
 {
     var s=document.getElementById("screen");
-    var len=s.value.length;
-    var sz=window.getComputedStyle(s,null).getPropertyValue('font-size');
-    sz=parseInt(sz);
+    var sz1=window.getComputedStyle(s,null).getPropertyValue('font-size');
+    sz1=parseInt(sz1);
     if(req)
     {
-        s.style.fontSize= (sz*2-4)+"px";
+        s.style.fontSize= (parseInt(sz1*(1.5)))+"px";
         flen=flen/2;
         req=false;
     }
