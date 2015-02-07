@@ -1,0 +1,5 @@
+
+// will document earlier changes here
+
+Version 1.22:
+  Major Revision : Size of digits automatically shrinks when you perform calculations with large numbers.
