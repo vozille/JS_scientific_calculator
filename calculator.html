@@ -137,8 +137,8 @@ table,tr,
 
 <table id="advanced">
 <tr>
-<td><input type="button" id="prog" class="button3" value="   nCr   " onclick="calc.screen.value+='C'"></td>
-<td><input type="button" id="prog" class="button3" value="   nPr   " onclick="calc.screen.value+='P'"></td>
+<td><input type="button" id="prog" class="button3" value="   nCr   " onclick="calc.screen.value+='C';resize()"></td>
+<td><input type="button" id="prog" class="button3" value="   nPr   " onclick="calc.screen.value+='P';resize()"></td>
 <td><input type="button" id="trigh1" class="button4" value="  sinh   " onclick="calc.screen.value=sinh1(calc.screen.value)"></td>
 <td><input type="button" id="trigh2" class="button4" value="  cosh " onclick="calc.screen.value=cosh1(calc.screen.value)"></td>
 <td><input type="button" id="trigh3" class="button4" value=" tanh  " onclick="calc.screen.value=tanh1(calc.screen.value)"></td>
@@ -160,9 +160,9 @@ table,tr,
 
 <tr>
 <td><input type="button" class="button2" id="gen" value="    ^2    " onclick="calc.screen.value=Math.pow(calc.screen.value,2)"></td>
-<td><input type="button" class="button2" id="gen" value="    ^n    " onclick="calc.screen.value+='^'"></td>
+<td><input type="button" class="button2" id="gen" value="    ^n    " onclick="calc.screen.value+='^';resize()"></td>
 <td><input type="button" class="button2" id="gen" value="   ^0.5   " onclick="calc.screen.value=Math.pow(calc.screen.value,0.5)"></td>
-<td><input type="button" class="button2" id="gen" value="    +/-   " onclick="calc.screen.value=eval((calc.screen.value)*(-1))"></td>
+<td><input type="button" class="button2" id="gen" value="    +/-   " onclick="calc.screen.value=eval((calc.screen.value)*(-1));resize()"></td>
 <td><input type="button" class="button2" id="gen" value="   1/x  " onclick="calc.screen.value=(1/(calc.screen.value))"></td>
 </tr>
 
@@ -171,43 +171,43 @@ table,tr,
 <table id="basic">
 
 <tr>
-<td><input type="button" class="button3" id="gen" value="      !     " onclick="calc.screen.value=factorial(calc.screen.value)"></td>
-<td><input type="button" class="button3" id="gen" value="      (     " onclick="calc.screen.value+='('"></td>
-<td><input type="button" class="button3" id="gen" value="      )     " onclick="calc.screen.value+=')'"></td>
+<td><input type="button" class="button3" id="gen" value="      !     " onclick="calc.screen.value=factorial(calc.screen.value);resize()"></td>
+<td><input type="button" class="button3" id="gen" value="      (     " onclick="calc.screen.value+='(';resize()"></td>
+<td><input type="button" class="button3" id="gen" value="      )     " onclick="calc.screen.value+=')';resize()"></td>
 <td><input type="button" class="button0" id="gen" value="     C     " onclick="calc.screen.value=calc.screen.value.slice(0,((calc.screen.value.length)-1))"></td>
-<td><input type="button" class="button0" id="gen" value="   AC      " onclick="calc.screen.value=''"></td>
+<td><input type="button" class="button0" id="gen" value="   AC      " onclick="calc.screen.value='';restore()"></td>
 </tr>
 
 <tr>
 <td><input type="button" class="button1" id="gen" value="     7     " onclick="calc.screen.value+='7'"></td>
-<td><input type="button" class="button1" id="gen" value="     8     " onclick="calc.screen.value+='8'"></td>
-<td><input type="button" class="button1" id="gen" value="     9     " onclick="calc.screen.value+='9'"></td>
-<td><input type="button" class="button2" id="gen" value="   e^x   " onclick="calc.screen.value=Math.exp(calc.screen.value)"></td>
-<td><input type="button" class="button3" id="gen" value="    +     " onclick="calc.screen.value+='+'"></td>
+<td><input type="button" class="button1" id="gen" value="     8     " onclick="calc.screen.value+='8';resize();"></td>
+<td><input type="button" class="button1" id="gen" value="     9     " onclick="calc.screen.value+='9';resize()"></td>
+<td><input type="button" class="button2" id="gen" value="   e^x   " onclick="calc.screen.value=Math.exp(calc.screen.value);resize()"></td>
+<td><input type="button" class="button3" id="gen" value="    +     " onclick="calc.screen.value+='+';resize()"></td>
 </tr>
 
 <tr>
-<td><input type="button" class="button1" id="gen" value="     4     " onclick="calc.screen.value+='4'"></td>
-<td><input type="button" class="button1" id="gen" value="     5     " onclick="calc.screen.value+='5'"></td>
-<td><input type="button" class="button1" id="gen" value="     6     " onclick="calc.screen.value+='6'"></td>
-<td><input type="button" class="button2" id="gen" value="  10^x   " onclick="calc.screen.value=Math.pow(10,calc.screen.value)"></td>
-<td><input type="button" class="button3" id="gen" value="     -     " onclick="calc.screen.value+='-'"></td>
+<td><input type="button" class="button1" id="gen" value="     4     " onclick="calc.screen.value+='4';resize()"></td>
+<td><input type="button" class="button1" id="gen" value="     5     " onclick="calc.screen.value+='5';resize()"></td>
+<td><input type="button" class="button1" id="gen" value="     6     " onclick="calc.screen.value+='6';resize()"></td>
+<td><input type="button" class="button2" id="gen" value="  10^x   " onclick="calc.screen.value=Math.pow(10,calc.screen.value);resize()"></td>
+<td><input type="button" class="button3" id="gen" value="     -     " onclick="calc.screen.value+='-';resize()"></td>
 </tr>
 
 <tr>
-<td><input type="button" class="button1" id="gen" value="     1     " onclick="calc.screen.value+='1'"></td>
-<td><input type="button" class="button1" id="gen" value="     2     " onclick="calc.screen.value+='2'"></td>
-<td><input type="button" class="button1" id="gen" value="     3     " onclick="calc.screen.value+='3'"></td>
+<td><input type="button" class="button1" id="gen" value="     1     " onclick="calc.screen.value+='1';resize()"></td>
+<td><input type="button" class="button1" id="gen" value="     2     " onclick="calc.screen.value+='2';resize()"></td>
+<td><input type="button" class="button1" id="gen" value="     3     " onclick="calc.screen.value+='3';resize()"></td>
 <td><input type="button" class="button2" id="gen" value="    Pi    " onclick="calc.screen.value=Math.PI"></td>
-<td><input type="button" class="button3" id="gen" value="     *     " onclick="calc.screen.value+='*'"></td>
+<td><input type="button" class="button3" id="gen" value="     *     " onclick="calc.screen.value+='*';resize()"></td>
 </tr>
 
 <tr>
-<td><input type="button" class="button1" id="gen" value="     0     " onclick="calc.screen.value+='0'"></td>
-<td><input type="button" class="button3" id="gen" value="      .     " onclick="calc.screen.value+='.'"></td>
+<td><input type="button" class="button1" id="gen" value="     0     " onclick="calc.screen.value+='0';resize()"></td>
+<td><input type="button" class="button3" id="gen" value="      .     " onclick="calc.screen.value+='.';resize()"></td>
 <td><input type="button" id="equal" class="button0" value="     =     " onclick="calc.screen.value=calculate(calc.screen.value)"></td>
 <td><input type="button" id="ans" class="button0" value="  ANS  " onclick="calc.screen.value=ans1(calc.screen.value)"></td>
-<td><input type="button" class="button3" id="gen" value="     /     " onclick="calc.screen.value+='/'"></td>
+<td><input type="button" class="button3" id="gen" value="     /     " onclick="calc.screen.value+='/';resize()"></td>
 </tr>
 </table>
 
@@ -233,9 +233,9 @@ table,tr,
 function factorial(x)
 {
     if(x==0)
-    	return 1;
+        return 1;
     else
-    	return x*factorial(x-1);
+        return x*factorial(x-1);
 };
 
 function gcd(x,y)
@@ -592,12 +592,35 @@ function quad(x)
     var c8=c6+" , "+c7;
     return (c8);
 }
-// function abt()
-// {
-//    alert("foo");
-// };
-
-
+var flen=20;
+var req=false;
+function resize()
+{
+    var s=document.getElementById("screen");
+    var len=s.value.length;
+    var sz=window.getComputedStyle(s,null).getPropertyValue('font-size');
+    sz=parseInt(sz);
+    if(len>flen)
+    {
+        s.style.fontSize= (sz/2+4)+"px";
+        req=true;
+        flen=flen*2;
+    }
+}
+function restore()
+{
+    var s=document.getElementById("screen");
+    var len=s.value.length;
+    var sz=window.getComputedStyle(s,null).getPropertyValue('font-size');
+    sz=parseInt(sz);
+    if(req)
+    {
+        s.style.fontSize= (sz*2-4)+"px";
+        flen=flen/2;
+        req=false;
+    }
+}
+window.onload=function(){ resize(); };
 </script>
 </body>
 </html>
